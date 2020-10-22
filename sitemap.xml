@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://oba.github.io/guides/reference/cli/</loc>
+    <lastmod>2020-10-22T09:56:48-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/guides/</loc>
+    <lastmod>2020-10-22T09:56:48-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/</loc>
+    <lastmod>2020-10-22T09:56:48-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/guides/reference/</loc>
+    <lastmod>2020-10-22T09:17:02-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/guides/language/</loc>
+    <lastmod>2020-10-22T09:16:49-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/guides/reference/embedding/</loc>
+    <lastmod>2020-10-22T09:16:11-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/guides/language/variables/</loc>
+    <lastmod>2020-10-22T09:12:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/guides/language/control_flow/</loc>
+    <lastmod>2020-10-22T09:12:01-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/guides/language/values/</loc>
+    <lastmod>2020-10-22T09:11:50-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/guides/language/functions/</loc>
+    <lastmod>2020-10-22T09:11:47-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/guides/language/modules/</loc>
+    <lastmod>2020-10-22T09:11:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/guides/language/syntax/</loc>
+    <lastmod>2020-10-22T09:11:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://oba.github.io/tags/</loc>
+  </url>
+  
+</urlset>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guides on Oba</title>
+    <link>http://oba.github.io/guides/</link>
+    <description>Recent content in Guides on Oba</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Kendal Harland</copyright>
+    <lastBuildDate>Thu, 22 Oct 2020 09:56:48 -0400</lastBuildDate><atom:link href="http://oba.github.io/guides/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reference on Oba</title>
+    <link>http://oba.github.io/guides/reference/</link>
+    <description>Recent content in Reference on Oba</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Kendal Harland</copyright>
+    <lastBuildDate>Thu, 22 Oct 2020 09:17:02 -0400</lastBuildDate><atom:link href="http://oba.github.io/guides/reference/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CLI</title>
+      <link>http://oba.github.io/guides/reference/cli/</link>
+      <pubDate>Thu, 22 Oct 2020 09:56:48 -0400</pubDate>
+      
+      <guid>http://oba.github.io/guides/reference/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Embedding</title>
+      <link>http://oba.github.io/guides/reference/embedding/</link>
+      <pubDate>Thu, 22 Oct 2020 09:16:11 -0400</pubDate>
+      
+      <guid>http://oba.github.io/guides/reference/embedding/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
