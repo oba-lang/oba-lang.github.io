@@ -2,63 +2,63 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Language on Oba</title>
-    <link>http://oba.github.io/guides/language/</link>
+    <link>https://oba-lang.github.io/guides/language/</link>
     <description>Recent content in Language on Oba</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Kendal Harland</copyright>
-    <lastBuildDate>Thu, 22 Oct 2020 09:16:49 -0400</lastBuildDate><atom:link href="http://oba.github.io/guides/language/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Oct 2020 09:16:49 -0400</lastBuildDate><atom:link href="https://oba-lang.github.io/guides/language/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Variables</title>
-      <link>http://oba.github.io/guides/language/variables/</link>
+      <link>https://oba-lang.github.io/guides/language/variables/</link>
       <pubDate>Thu, 22 Oct 2020 09:12:08 -0400</pubDate>
       
-      <guid>http://oba.github.io/guides/language/variables/</guid>
+      <guid>https://oba-lang.github.io/guides/language/variables/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Control Flow</title>
-      <link>http://oba.github.io/guides/language/control_flow/</link>
+      <link>https://oba-lang.github.io/guides/language/control_flow/</link>
       <pubDate>Thu, 22 Oct 2020 09:12:01 -0400</pubDate>
       
-      <guid>http://oba.github.io/guides/language/control_flow/</guid>
+      <guid>https://oba-lang.github.io/guides/language/control_flow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Values</title>
-      <link>http://oba.github.io/guides/language/values/</link>
+      <link>https://oba-lang.github.io/guides/language/values/</link>
       <pubDate>Thu, 22 Oct 2020 09:11:50 -0400</pubDate>
       
-      <guid>http://oba.github.io/guides/language/values/</guid>
+      <guid>https://oba-lang.github.io/guides/language/values/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Functions</title>
-      <link>http://oba.github.io/guides/language/functions/</link>
+      <link>https://oba-lang.github.io/guides/language/functions/</link>
       <pubDate>Thu, 22 Oct 2020 09:11:47 -0400</pubDate>
       
-      <guid>http://oba.github.io/guides/language/functions/</guid>
+      <guid>https://oba-lang.github.io/guides/language/functions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Modules</title>
-      <link>http://oba.github.io/guides/language/modules/</link>
+      <link>https://oba-lang.github.io/guides/language/modules/</link>
       <pubDate>Thu, 22 Oct 2020 09:11:40 -0400</pubDate>
       
-      <guid>http://oba.github.io/guides/language/modules/</guid>
+      <guid>https://oba-lang.github.io/guides/language/modules/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Syntax</title>
-      <link>http://oba.github.io/guides/language/syntax/</link>
+      <link>https://oba-lang.github.io/guides/language/syntax/</link>
       <pubDate>Thu, 22 Oct 2020 09:11:26 -0400</pubDate>
       
-      <guid>http://oba.github.io/guides/language/syntax/</guid>
+      <guid>https://oba-lang.github.io/guides/language/syntax/</guid>
       <description></description>
     </item>
     
