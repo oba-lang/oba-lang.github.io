@@ -159,9 +159,16 @@ default.</p>
 false
 </code></pre></div><h1 id="numbers">Numbers</h1>
 <p>Oba uses double-precision floating point for all numeric values</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">1234
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">0
+1234
 -1234
 3.14159
+</code></pre></div><h1 id="functions">Functions</h1>
+<p>Functions are first class values in Oba. They can be stored in variables and
+passed arguments to other functions.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fn hello = system::print(&#34;hello&#34;)
+fn call f = f()
+call(hello) // expect: hello
 </code></pre></div><h1 id="null">Null</h1>
 <p>Oba has a singleton <code>null</code> value which indicates the absence of a value. It
 is often used as a return value from built-in functions which don&rsquo;t return
