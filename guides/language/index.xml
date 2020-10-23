@@ -2,67 +2,77 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Language on Oba</title>
-    <link>https://oba-lang.github.io/guides/language/</link>
+    <link>/guides/language/</link>
     <description>Recent content in Language on Oba</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Kendal Harland</copyright>
-    <lastBuildDate>Thu, 22 Oct 2020 09:16:49 -0400</lastBuildDate><atom:link href="https://oba-lang.github.io/guides/language/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Oct 2020 09:16:49 -0400</lastBuildDate><atom:link href="/guides/language/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overview</title>
+      <link>/guides/language/overview/</link>
+      <pubDate>Fri, 23 Oct 2020 08:43:37 -0400</pubDate>
+      
+      <guid>/guides/language/overview/</guid>
+      <description>A lightweight, fast, embeddable, functional scripting language.  Oba sports a dynamic, but strong type system and a terse syntax which borrows designs from Haskell, Rust, and Go.
+import &amp;#34;system&amp;#34; fn fib n = match n | 0 = 0 | 1 = 1 | n = fib(n-1) + fib(n-2) ; system::print(fib(13))   Oba is small. The implementation can be skimmed an in afternoon.
+  Oba is functional. Oba aims to make functional programming more accessible by providing a simple, terse syntax which should feel accessible to programmers coming from imperative languages.</description>
+    </item>
+    
     <item>
       <title>Variables</title>
-      <link>https://oba-lang.github.io/guides/language/variables/</link>
+      <link>/guides/language/variables/</link>
       <pubDate>Thu, 22 Oct 2020 09:12:08 -0400</pubDate>
       
-      <guid>https://oba-lang.github.io/guides/language/variables/</guid>
+      <guid>/guides/language/variables/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Control Flow</title>
-      <link>https://oba-lang.github.io/guides/language/control_flow/</link>
+      <link>/guides/language/control_flow/</link>
       <pubDate>Thu, 22 Oct 2020 09:12:01 -0400</pubDate>
       
-      <guid>https://oba-lang.github.io/guides/language/control_flow/</guid>
+      <guid>/guides/language/control_flow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Values</title>
-      <link>https://oba-lang.github.io/guides/language/values/</link>
+      <link>/guides/language/values/</link>
       <pubDate>Thu, 22 Oct 2020 09:11:50 -0400</pubDate>
       
-      <guid>https://oba-lang.github.io/guides/language/values/</guid>
+      <guid>/guides/language/values/</guid>
       <description>Values are built-in object types. They can be created through literals, which are expressions that evaluate to a value. Values are immutable by default.
 Booleans There are two boolean literals, true and false.
 true false Numbers Oba uses double-precision floating point for all numeric values
-0 1234 -1234 3.14159 Functions Functions are first class values in Oba. They can be stored in variables and passed arguments to other functions.
-fn hello = system::print(&amp;#34;hello&amp;#34;) fn call f = f() call(hello) // expect: hello Null Oba has a singleton null value which indicates the absence of a value.</description>
+0 1234 -1234 3.14159 Functions Functions are first class values in Oba. They can be stored in variables and passed as arguments to other functions.</description>
     </item>
     
     <item>
       <title>Functions</title>
-      <link>https://oba-lang.github.io/guides/language/functions/</link>
+      <link>/guides/language/functions/</link>
       <pubDate>Thu, 22 Oct 2020 09:11:47 -0400</pubDate>
       
-      <guid>https://oba-lang.github.io/guides/language/functions/</guid>
+      <guid>/guides/language/functions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Modules</title>
-      <link>https://oba-lang.github.io/guides/language/modules/</link>
+      <link>/guides/language/modules/</link>
       <pubDate>Thu, 22 Oct 2020 09:11:40 -0400</pubDate>
       
-      <guid>https://oba-lang.github.io/guides/language/modules/</guid>
+      <guid>/guides/language/modules/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Syntax</title>
-      <link>https://oba-lang.github.io/guides/language/syntax/</link>
+      <link>/guides/language/syntax/</link>
       <pubDate>Thu, 22 Oct 2020 09:11:26 -0400</pubDate>
       
-      <guid>https://oba-lang.github.io/guides/language/syntax/</guid>
+      <guid>/guides/language/syntax/</guid>
       <description></description>
     </item>
     

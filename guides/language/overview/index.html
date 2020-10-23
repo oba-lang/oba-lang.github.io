@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Guides - Oba</title>
+  <title>Overview - Oba</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="favicon.png">
@@ -18,7 +18,7 @@
 
 </head>
 
-<body class='page page-default-list'>
+<body class='page page-default-single'>
   <div id="main-menu-mobile" class="main-menu-mobile">
   <ul>
     
@@ -115,7 +115,7 @@
       
       <li><h4>Language</h4></li>
       
-      <li class="">
+      <li class="active ">
         <a href="/guides/language/overview/">Overview</a>
       </li>
       
@@ -152,26 +152,40 @@
         </div>
         <div class="col-12 col-md-9">
           
+<h1 class="title">Overview</h1>
+<div class="content ">
+  <h3 id="a-lightweight-fast-embeddable-functional-scripting-language">A lightweight, fast, embeddable, functional scripting language.</h3>
+<hr>
+<p>Oba sports a dynamic, but strong type system and a terse syntax which borrows
+designs from Haskell, Rust, and Go.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">import &#34;system&#34;
 
-<h1 class="title">Guides</h1>
-<div class="content">
-  
+fn fib n = match n
+  | 0 = 0
+  | 1 = 1
+  | n = fib(n-1) + fib(n-2)
+  ;
+
+system::print(fib(13))
+</code></pre></div><ul>
+<li>
+<p><strong>Oba is small</strong>.  The <a href="https://github.com/oba-lang/oba/tree/master/src/vm">implementation</a> can be skimmed an in afternoon.</p>
+</li>
+<li>
+<p><strong>Oba is functional</strong>. Oba aims to make functional programming more accessible
+by providing a simple, terse syntax which should feel accessible to programmers
+coming from imperative languages.</p>
+</li>
+<li>
+<p><strong>Oba is a scripting language</strong>. It has no dependencies and is suitable for
+writing small tools or for embedding within a larger application.</p>
+</li>
+</ul>
+<hr>
+<p>Click on the links in the sidebar to learn more.</p>
+
 </div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/guides/reference/">Reference</a></h2>
 </div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="/guides/language/">Language</a></h2>
-</div>
-
-
-
 
         </div>
       </div>

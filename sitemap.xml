@@ -3,71 +3,76 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://oba-lang.github.io/guides/reference/cli/</loc>
+    <loc>/guides/</loc>
+    <lastmod>2020-10-23T08:43:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-10-23T08:43:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/guides/language/overview/</loc>
+    <lastmod>2020-10-23T08:43:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/guides/reference/cli/</loc>
     <lastmod>2020-10-22T09:56:48-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/guides/</loc>
-    <lastmod>2020-10-22T09:56:48-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oba-lang.github.io/</loc>
-    <lastmod>2020-10-22T09:56:48-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://oba-lang.github.io/guides/reference/</loc>
+    <loc>/guides/reference/</loc>
     <lastmod>2020-10-22T09:17:02-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/guides/language/</loc>
+    <loc>/guides/language/</loc>
     <lastmod>2020-10-22T09:16:49-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/guides/reference/embedding/</loc>
+    <loc>/guides/reference/embedding/</loc>
     <lastmod>2020-10-22T09:16:11-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/guides/language/variables/</loc>
+    <loc>/guides/language/variables/</loc>
     <lastmod>2020-10-22T09:12:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/guides/language/control_flow/</loc>
+    <loc>/guides/language/control_flow/</loc>
     <lastmod>2020-10-22T09:12:01-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/guides/language/values/</loc>
+    <loc>/guides/language/values/</loc>
     <lastmod>2020-10-22T09:11:50-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/guides/language/functions/</loc>
+    <loc>/guides/language/functions/</loc>
     <lastmod>2020-10-22T09:11:47-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/guides/language/modules/</loc>
+    <loc>/guides/language/modules/</loc>
     <lastmod>2020-10-22T09:11:40-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/guides/language/syntax/</loc>
+    <loc>/guides/language/syntax/</loc>
     <lastmod>2020-10-22T09:11:26-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://oba-lang.github.io/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>
