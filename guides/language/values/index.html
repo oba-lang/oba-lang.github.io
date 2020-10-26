@@ -173,12 +173,15 @@ passed as arguments to other functions.</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fn hello = system::print(&#34;hello&#34;)
 fn call f = f()
 call(hello)
-</code></pre></div><h1 id="null">Null</h1>
-<p>Oba has a singleton <code>null</code> value which indicates the absence of a value. It
+</code></pre></div><h1 id="nil">Nil</h1>
+<p>Oba has a singleton <code>nil</code> value which indicates the absence of a value. It
 is often used as a return value from built-in functions which don&rsquo;t return
-anything. It is not possible for user-code to reference <code>null</code> directly. For
-example, the following is not valid code:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let x = null
+anything. There is no <code>nil</code> keyword, so the following code is invalid:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let x = nil
+</code></pre></div><p>However, the user can detect whether a value is nil using <code>isNil</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let nil = system::print(&#34;print returns nil&#34;)
+system::print(isNil(nil)) // true
+system::print(isNil(&#34;&#34;)) // false
 </code></pre></div>
 </div>
 </div>
