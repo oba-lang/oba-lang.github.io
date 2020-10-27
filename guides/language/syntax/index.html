@@ -247,7 +247,42 @@ below:</p>
 </tr>
 </tbody>
 </table>
+<h2 id="grammar">Grammar</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">declaration   = import
+              | statement
+import        = &#39;import&#39; STRING
+statement     = functionDefn
+              | variableDecl
+              | debugStmt
+              | blockStmt
+              | ifStmt
+              | whileStmt
+              | expression
+functionDefn  = &#39;fn&#39; IDENT parameterList functionBody
+variableDecl  = &#39;let&#39; IDENT &#39;=&#39; expression
+debugStmt     = &#39;debug&#39; expression
+blockStmt     = &#39;{&#39; declaration* &#39;}&#39;
+ifStmt        = &#39;if&#39; expression statement (&#39;else&#39; statement)?
+whileStmt     = &#39;while&#39; expression statement
+expression    = grouping
+              | PREFIX_OP expression
+              | TERM INIFIX_OP expression
+grouping      = &#39;(&#39; expression* &#39;)
+parameterList = IDENT*
+functionBody  = expression
+              | blockStmt
+TERM          = IDENT
+              | NUMBER
+              | STRING
+              | functionCall
+IDENT         = ([a-zA-Z_][a-zA-Z_0-9]*) (&#39;::&#39; IDENT)*
+STRING        = &#39;&#34;&#39; [^&#39;&#34;&#39;]* &#39;&#34;&#39;
+NUMBER        = [0-9]+
+functionCall  = IDENT &#39;(&#39; (expression &#39;,&#39;?)* &#39;)&#39;
+PREFIX_OP     = &#39;!&#39;
+INIFIX_OP     = &#39;+&#39; &#39;-&#39; &#39;*&#39; &#39;/&#39;
 
+</code></pre></div>
 </div>
 </div>
 
