@@ -91,7 +91,9 @@ true false Numbers Oba uses double-precision floating point for all numeric valu
       <pubDate>Thu, 22 Oct 2020 09:11:26 -0400</pubDate>
       
       <guid>/guides/language/syntax/</guid>
-      <description></description>
+      <description>Comments Oba has line comments, only, which start with // and end on a newline:
+// This is a comment Reserved words debug false let true if else while match fn import Identifiers Identifiers start with an underscore or letter and contain letters, digits, and underscores. Examples:
+_i camelCase PascalCase _snake_case alph4num3r1c ALL_CAPS Newlines Oba does not have semicolons, except for in special cases. Instead, newlines (\n) are used to terminate statements:</description>
     </item>
     
   </channel>
