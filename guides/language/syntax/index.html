@@ -154,12 +154,12 @@
           
 <h1 class="title">Syntax</h1>
 <div class="content ">
-  <h1 id="comments">Comments</h1>
+  <h2 id="comments">Comments</h2>
 <p>Oba has line comments, only, which start with <code>//</code> and end on a newline:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">// This is a comment
-</code></pre></div><h1 id="reserved-words">Reserved words</h1>
+</code></pre></div><h2 id="reserved-words">Reserved words</h2>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">debug false let true if else while match fn import
-</code></pre></div><h1 id="identifiers">Identifiers</h1>
+</code></pre></div><h2 id="identifiers">Identifiers</h2>
 <p>Identifiers start with an underscore or letter and contain letters, digits, and
 underscores. Examples:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">_i
@@ -168,19 +168,19 @@ PascalCase
 _snake_case
 alph4num3r1c
 ALL_CAPS
-</code></pre></div><h1 id="newlines">Newlines</h1>
+</code></pre></div><h2 id="newlines">Newlines</h2>
 <p>Oba does not have semicolons, except for in special cases. Instead, newlines
 (\n) are used to terminate statements:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">system::print(&#34;hello&#34;)
 system::print(&#34;there&#34;)
-</code></pre></div><p>Newlines in the middle of statements are ignored, to allow long statements to
-be broken across multiple lines for organization:</p>
+</code></pre></div><p>Newlines in the middle of statements are ignored, to allow breaking long
+statements across multiple lines:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">call_function_with_many_args(
   arg0, arg1, arg2, arg3, arg4,
   arg5, arg6, arg7, arg8, arg9
 )
-</code></pre></div><h1 id="blocks">Blocks</h1>
-<p>Blocks are used to create nested scopes, and are delimited by curly braces. They
+</code></pre></div><h2 id="blocks">Blocks</h2>
+<p>Blocks are used to create nested scopes and are delimited by curly braces. They
 are used as the bodies of functions, if-statements and loops. Some examples:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">{
   // x is a local variable in this block&#39;s scope.
@@ -200,7 +200,7 @@ while (true) {
 fn foo {
   let x = 4; // You get the idea...
 }
-</code></pre></div><h1 id="predenence-and-associativity">Predenence and associativity</h1>
+</code></pre></div><h2 id="precedence-and-associativity">Precedence and associativity</h2>
 <p>Oba has both prefix and infix operators. Unary operators such as the &ldquo;not&rdquo;
 operator <code>!</code> are always right-associative. Binary operators such as <code>+-*/</code> are
 always left-associative.  The full set of operators is described in the table
