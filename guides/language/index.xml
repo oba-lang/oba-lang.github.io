@@ -66,7 +66,10 @@ fn add a b = a + b A function body may be an expression, or a block-statement. T
       <pubDate>Thu, 22 Oct 2020 09:11:40 -0400</pubDate>
       
       <guid>/guides/language/modules/</guid>
-      <description></description>
+      <description>Modules are reusable units Oba code. Modules correspond to individual .oba files and can be used to break programs into smaller pieces.
+All of the top-level function declarations and global variables defined in a module are &amp;ldquo;public&amp;rdquo; which means that other modules can import that module and read those symbols.
+Imports Modules are included into other modules using the import keyword:
+import &amp;#34;system&amp;#34; A module&amp;rsquo;s symbols can be accessed using the :: operator:</description>
     </item>
     
     <item>

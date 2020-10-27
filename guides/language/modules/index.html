@@ -154,7 +154,26 @@
           
 <h1 class="title">Modules</h1>
 <div class="content ">
-  
+  <p>Modules are reusable units Oba code. Modules correspond to individual <code>.oba</code>
+files and can be used to break programs into smaller pieces.</p>
+<p>All of the top-level function declarations and global variables defined in a
+module are &ldquo;public&rdquo; which means that other modules can import that module and
+read those symbols.</p>
+<h2 id="imports">Imports</h2>
+<p>Modules are included into other modules using the <code>import</code> keyword:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">import &#34;system&#34;
+</code></pre></div><p>A module&rsquo;s symbols can be accessed using the <code>::</code> operator:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">system::print(&#34;print from another module&#34;)
+</code></pre></div><p>For now, Oba only supports importing core modules, which are built into the
+interpreter and made available to all programs. In a future release users will
+be able to write and import their own modules.</p>
+<h2 id="core-modules">Core modules</h2>
+<p>Core modules are imported by name. e.g. <code>import &quot;system&quot;</code></p>
+<ul>
+<li><code>system</code> - Basic I/O and interaction with the host system.</li>
+<li><code>time</code>   - Timing routines.</li>
+</ul>
+
 </div>
 </div>
 
