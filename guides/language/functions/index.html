@@ -154,7 +154,45 @@
           
 <h1 class="title">Functions</h1>
 <div class="content ">
-  
+  <p>Oba supports functions and closures. Functions in Oba are first-class values:
+they can be stored in variables and passed to other functions as arguments.</p>
+<p>Functions in oba are declared using the <code>fn</code> keyword. The first identifier after
+<code>fn</code> is the function name, and the rest are the function paramters:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fn add a b = a + b
+</code></pre></div><p>A function body may be an expression, or a block-statement. The above code
+sample is an example of a function with an expression body. We can write the
+same function with a block-statement body, using { and }:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fn add a b {
+  a + b
+}
+</code></pre></div><p>You may have noticed that functions do not use return statements. In Oba,
+a function call evaluates to the last value on the stack when the end of the
+function body is reached. So, in the above example, <code>a + b</code> is returned.</p>
+<h2 id="types">Types</h2>
+<p>Oba is a dynamic language, so functions do not declare their return types or
+their parameter types. Instead, it is common to document the expected inputs
+and outputs of a function in a doc comment:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">// Adds [a] and [b], which must be numbers or strings.
+// Both arguments must have the same type.
+fn add a b {
+  a + b
+}
+</code></pre></div><h2 id="closures">Closures</h2>
+<p>Closures are created when a function definition &ldquo;closes over&rdquo; a value in the
+surrounding scope:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">import &#34;system&#34;
+
+fn capture value {
+  fn print {
+    system::print(value)
+  }
+}
+
+let printer = capture(1)
+printer() // Prints: 1
+</code></pre></div><p>In the above example, we say that <code>print</code> &ldquo;captures&rdquo; <code>value</code>, since <code>value</code> is
+defined outside of the body of <code>print</code>.</p>
+
 </div>
 </div>
 
