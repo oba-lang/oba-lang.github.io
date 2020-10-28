@@ -154,7 +154,30 @@
           
 <h1 class="title">Control Flow</h1>
 <div class="content ">
-  
+  <h2 id="if-statements">If statements</h2>
+<p>If-statements are used to branch on values that are <code>true</code> or <code>false</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">if true {
+ // Do something.
+} else {
+ // Do something else.
+}
+</code></pre></div><p>Notice that an if-statement does not need a following <code>else</code> block.</p>
+<h2 id="loops">Loops</h2>
+<p>The <code>while</code> keyword can be used to implement a loop:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">import &#34;system&#34;
+
+while true {
+  system::print(&#34;looping&#34;)     
+}
+</code></pre></div><h2 id="conditionals">Conditionals</h2>
+<p>The <code>true</code> in <code>if true</code> is known as the <em>conditional expression</em>.  In Oba, the
+conditional expression <em>must</em> evaluate to either <code>true</code> or <code>false</code>.  Values are
+not &ldquo;truthy&rdquo; or &ldquo;falsey&rdquo; as they are in other scripting languages such as
+Python:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">if 1 { // Error
+  ...
+}
+</code></pre></div>
 </div>
 </div>
 
