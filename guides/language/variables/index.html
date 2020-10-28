@@ -154,7 +154,67 @@
           
 <h1 class="title">Variables</h1>
 <div class="content ">
-  
+  <p>Oba has two kinds of variables: Globals and Locals.</p>
+<p><strong>Globals</strong> are symbols that are declared in a module&rsquo;s top-level scope. This
+includes global variables and function names:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">// module: foo
+
+let x = 1
+
+fn foo {
+  system::print(&#34;foo&#34;)
+}
+</code></pre></div><p>In the above example, <code>a</code> and <code>foo</code> are both globals.</p>
+<p><strong>Locals</strong> are variables that are declared in a nested scope, such as function
+bodies, if-statements, loops, etc.</p>
+<h2 id="visibility">Visibility</h2>
+<p>Globals are visible to other modules that import the current module:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">// module: bar
+
+import &#34;foo&#34;
+
+foo::foo() // Prints: foo
+</code></pre></div><p>Imported module names are exceptions to this rule: The imported module name
+becomes a global variable in the importing module, but is not exposed to other
+modules:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">// module: foo
+
+import &#34;system&#34;
+import &#34;time&#34;
+
+system::print(time::now())
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">// module: bar
+
+import &#34;system&#34;
+import &#34;foo&#34;
+
+system::print(time::now()) // error: time is undefined
+</code></pre></div><h2 id="types">Types</h2>
+<p>Oba&rsquo;s type system is both dynamic and strong. That means:</p>
+<ol>
+<li>A variable&rsquo;s type is decided at runtime.</li>
+<li>A variable&rsquo;s type does not change after assignment.</li>
+</ol>
+<p>For example: Once a variable holds a number value, it must always hold a number
+value:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fn make_var {
+  let x = 1
+  x = &#34;&#34; // Error
+  x = 10 // OK
+}
+</code></pre></div><h2 id="assignment">Assignment</h2>
+<p>All variables must be assigned a value when they are defined. Global variables
+cannot be reassigned, but local variables can be reassigned freely:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let x // Error
+
+let x = 1
+x = 2 // Error
+
+{
+  let y = 1
+  y = 2 // OK
+}
+</code></pre></div>
 </div>
 </div>
 

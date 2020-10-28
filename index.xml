@@ -43,7 +43,11 @@ import &amp;#34;system&amp;#34; fn fib n = match n | 0 = 0 | 1 = 1 | n = fib(n-1
       <pubDate>Thu, 22 Oct 2020 09:12:08 -0400</pubDate>
       
       <guid>/guides/language/variables/</guid>
-      <description></description>
+      <description>Oba has two kinds of variables: Globals and Locals.
+Globals are symbols that are declared in a module&amp;rsquo;s top-level scope. This includes global variables and function names:
+// module: foo let x = 1 fn foo { system::print(&amp;#34;foo&amp;#34;) } In the above example, a and foo are both globals.
+Locals are variables that are declared in a nested scope, such as function bodies, if-statements, loops, etc.
+Visibility Globals are visible to other modules that import the current module:</description>
     </item>
     
     <item>
