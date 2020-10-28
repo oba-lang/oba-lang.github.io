@@ -200,7 +200,60 @@ while (true) {
 fn foo {
   let x = 4; // You get the idea...
 }
-</code></pre></div><h2 id="precedence-and-associativity">Precedence and associativity</h2>
+</code></pre></div><h2 id="strings">Strings</h2>
+<p>Oba strings are surrounded by double-quotes and can span newlines:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&#34;This is a string&#34;
+
+&#34;This
+is
+also
+a
+string
+&#34;
+</code></pre></div><p>Values can be interpolated within strings using <code>%()</code> notation:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">import &#34;system&#34;
+
+let a = 1;
+let b = 2;
+
+system::print(&#34;%(a) + %(b) = %(a + b)&#34;) // Prints: 1 + 2 = 3
+</code></pre></div><p>The interpolated expression can span multiple lines as well. This prints the
+same thing as the above example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">system::print(&#34;%(a) + %(b) = %(
+a + b
+)&#34;)
+</code></pre></div><p>Strings also support the following escape characters:</p>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\%</code></td>
+<td>Percent sign</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>Backslash</td>
+</tr>
+<tr>
+<td><code>\r</code></td>
+<td>Carriage return</td>
+</tr>
+<tr>
+<td><code>\n</code></td>
+<td>Newline</td>
+</tr>
+<tr>
+<td><code>\&quot;</code></td>
+<td>Double quotation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="precedence-and-associativity">Precedence and associativity</h2>
 <p>Oba has both prefix and infix operators. Unary operators such as the &ldquo;not&rdquo;
 operator <code>!</code> are always right-associative. Binary operators such as <code>+-*/</code> are
 always left-associative.  The full set of operators is described in the table
