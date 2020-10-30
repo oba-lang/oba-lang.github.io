@@ -9,13 +9,24 @@
     <copyright>Kendal Harland</copyright>
     <lastBuildDate>Thu, 22 Oct 2020 09:16:49 -0400</lastBuildDate><atom:link href="/guides/language/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Data</title>
+      <title>Data Types</title>
       <link>/guides/language/data/</link>
       <pubDate>Fri, 30 Oct 2020 10:23:58 -0400</pubDate>
       
       <guid>/guides/language/data/</guid>
       <description>Oba does not support classes in the same way that object-oriented languages do. Instead oba supports &amp;ldquo;Data types&amp;rdquo; which are sort of like Python&amp;rsquo;s named tuples. A data type has a family along with a number of named constructors for the type. For example:
 data Cycle = Bicycle | Motorcycle color The above example is a simple definition of a Cycle data type family. A Cycle can be created using either of the two constructors Bicycle and Motorcycle.</description>
+    </item>
+    
+    <item>
+      <title>Pattern Matching</title>
+      <link>/guides/language/pattern_matching/</link>
+      <pubDate>Fri, 30 Oct 2020 10:23:58 -0400</pubDate>
+      
+      <guid>/guides/language/pattern_matching/</guid>
+      <description>Oba supports pattern matching on both literal values and data types using match expressions. Match expressions have the form:
+match &amp;lt;value&amp;gt; | &amp;lt;pattern&amp;gt; = &amp;lt;expression&amp;gt; | &amp;lt;pattern&amp;gt; = &amp;lt;expression&amp;gt; ... ; The rules for pattern matching are:
+ value can be a literal or a variable. pattern can be a literal or an instance of a data type (more on this below).  Pattern order also matters: patterns are considered from top to bottom, and the first one that matches the value wins.</description>
     </item>
     
     <item>

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Data - Oba</title>
+  <title>Data Types - Oba</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="favicon.png">
@@ -116,7 +116,11 @@
       <li><h4>Language</h4></li>
       
       <li class="active ">
-        <a href="/guides/language/data/">Data</a>
+        <a href="/guides/language/data/">Data Types</a>
+      </li>
+      
+      <li class="">
+        <a href="/guides/language/pattern_matching/">Pattern Matching</a>
       </li>
       
       <li class="">
@@ -156,7 +160,7 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Data</h1>
+<h1 class="title">Data Types</h1>
 <div class="content ">
   <p>Oba does not support classes in the same way that object-oriented languages do.
 Instead oba supports &ldquo;Data types&rdquo; which are sort of like Python&rsquo;s named
@@ -181,7 +185,16 @@ let motorcycle = Motorcycle(&#34;Red&#34;)
 </code></pre></div><p>If you print an instance, you&rsquo;ll see its data type family, constructor, and the
 fields that it contains:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">system::print(Motorcycle(&#34;Red&#34;)) // Prints: (Cycle::Motorcycle,Red)
-</code></pre></div>
+</code></pre></div><h2 id="pattern-matching">Pattern Matching</h2>
+<p>Data types can be used as patterns in <code>match</code> expressions:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let color = match motorcycle
+  | Bicycle          = &#34;grey&#34;
+  | Motorcycle color = color
+  ;
+
+system::print(color) // Prints: &#34;Red&#34;
+</code></pre></div><p>For more information on pattern-matching, see <a href="/guides/language/pattern_matching/">Pattern Matching</a>.</p>
+
 </div>
 </div>
 

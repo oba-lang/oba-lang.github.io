@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Functions - Oba</title>
+  <title>Pattern Matching - Oba</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="favicon.png">
@@ -119,7 +119,7 @@
         <a href="/guides/language/data/">Data Types</a>
       </li>
       
-      <li class="">
+      <li class="active ">
         <a href="/guides/language/pattern_matching/">Pattern Matching</a>
       </li>
       
@@ -139,7 +139,7 @@
         <a href="/guides/language/values/">Values</a>
       </li>
       
-      <li class="active ">
+      <li class="">
         <a href="/guides/language/functions/">Functions</a>
       </li>
       
@@ -160,46 +160,75 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Functions</h1>
+<h1 class="title">Pattern Matching</h1>
 <div class="content ">
-  <p>Oba supports functions and closures. Functions in Oba are first-class values:
-they can be stored in variables and passed to other functions as arguments.</p>
-<p>Functions in oba are declared using the <code>fn</code> keyword. The first identifier after
-<code>fn</code> is the function name, and the rest are the function paramters:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fn add a b = a + b
-</code></pre></div><p>A function body may be an expression, or a block-statement. The above code
-sample is an example of a function with an expression body. We can write the
-same function with a block-statement body, using { and }:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fn add a b {
-  a + b
-}
-</code></pre></div><p>You may have noticed that functions do not use return statements. In Oba,
-a function call evaluates to the last value on the stack when the end of the
-function body is reached. So, in the above example, <code>a + b</code> is returned.</p>
-<h2 id="types">Types</h2>
-<p>Oba is a dynamic language, so functions do not declare their return types or
-their parameter types. Instead, it is common to document the expected inputs
-and outputs of a function in a doc comment:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">// Adds [a] and [b], which must be numbers or strings.
-// Both arguments must have the same type.
-fn add a b {
-  a + b
-}
-</code></pre></div><h2 id="closures">Closures</h2>
-<p>Closures are created when a function definition &ldquo;closes over&rdquo; a value in the
-surrounding scope:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">import &#34;system&#34;
+  <p>Oba supports pattern matching on both literal values and <a href="/guides/language/data/">data types</a> using
+<em>match expressions</em>. Match expressions have the form:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">match &lt;value&gt; | &lt;pattern&gt; = &lt;expression&gt; | &lt;pattern&gt; = &lt;expression&gt; ... ;
+</code></pre></div><p>The rules for pattern matching are:</p>
+<ul>
+<li><code>value</code> can be a literal or a variable.</li>
+<li><code>pattern</code> can be a literal or an instance of a data type (more on this below).</li>
+</ul>
+<p>Pattern order also matters: patterns are considered from top to bottom, and the
+first one that matches the value wins.</p>
+<h2 id="literal-patterns">Literal Patterns</h2>
+<p>Literal patterns are the simplest: They match if the given value is equal to the
+literal:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">match 1
+  | 1 = &#34;one&#34;
+  | 2 = &#34;two&#34;
+  ;
+</code></pre></div><p>The expression above always evaluates to &ldquo;one&rdquo;, because the literal pattern <code>1</code>
+always matches the value <code>1</code>.</p>
+<h2 id="variable-patterns">Variable Patterns</h2>
+<p>Variable patterns are almost as simple as literal patterns: They match if the
+given value has the same value as the variable:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let x = 1
 
-fn capture value {
-  fn print {
-    system::print(value)
-  }
-}
+match 1
+  | x = &#34;one&#34;
+  | 2 = &#34;two&#34;
+  ;
+</code></pre></div><p>The expression above always evaluates to &ldquo;one&rdquo;, because the variable pattern
+<code>x</code> always matches the value stored in the variable <code>x</code>, by definition.</p>
+<p>Variable patterns are a good way to specify a catch-all pattern if none of the
+other patterns in the expression match a value:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let value = 3
 
-let printer = capture(1)
-printer() // Prints: 1
-</code></pre></div><p>In the above example, we say that <code>print</code> &ldquo;captures&rdquo; <code>value</code>, since <code>value</code> is
-defined outside of the body of <code>print</code>.</p>
+match value
+  | 1     = &#34;one&#34;
+  | 2     = &#34;two&#34;
+  | value = &#34;big number&#34; // catch-all
+  ;
+</code></pre></div><h2 id="constructor-patterns">Constructor Patterns</h2>
+<p>You can use pattern matching to both detect an instance&rsquo;s [data type] <em>and</em>
+grab the values stored in in its fields. For example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">data Shape = Square length | Rectangle width height
+
+let shape = Rectangle(3, 4)
+
+let area = match shape
+   | Square l      = l * l
+   | Rectangle w h = w * h
+   ; 
+</code></pre></div><h2 id="mixed-patterns">Mixed Patterns</h2>
+<p>A match expression can use many different patterns at once. Here&rsquo;s an example
+that uses literal, variable, and constructor patterns all at once:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">  let value = Square(4)
+  let size = match value
+    | 1             = 1
+    | 2             = 2
+    | Square l      = l * l
+    | Rectangle w h = w * h
+    | value         = value
+    ;
+
+system::print(size) // Prints: 16
+</code></pre></div><h2 id="error-handling">Error handling</h2>
+<p>It&rsquo;s possible that none of the patterns in a match expression match the given
+value. In this case an error is raised at runtime. As a best practice, always
+use a catch-all, variable pattern when possible.</p>
 
 </div>
 </div>
