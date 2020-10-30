@@ -116,6 +116,10 @@
       <li><h4>Language</h4></li>
       
       <li class="">
+        <a href="/guides/language/data/">Data</a>
+      </li>
+      
+      <li class="">
         <a href="/guides/language/overview/">Overview</a>
       </li>
       
@@ -301,8 +305,10 @@ below:</p>
 </tbody>
 </table>
 <h2 id="grammar">Grammar</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">declaration   = import
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">declaration   = data
               | statement
+              | import
+data          | &#39;data&#39; IDENT &#39;=&#39; constructor (&#39;|&#39; constructor)*
 import        = &#39;import&#39; STRING
 statement     = functionDefn
               | variableDecl
@@ -311,6 +317,7 @@ statement     = functionDefn
               | ifStmt
               | whileStmt
               | expression
+constructor   | IDENT+
 functionDefn  = &#39;fn&#39; IDENT parameterList functionBody
 variableDecl  = &#39;let&#39; IDENT &#39;=&#39; expression
 debugStmt     = &#39;debug&#39; expression
@@ -328,10 +335,10 @@ TERM          = IDENT
               | NUMBER
               | STRING
               | functionCall
+functionCall  = IDENT &#39;(&#39; (expression &#39;,&#39;?)* &#39;)&#39;
 IDENT         = ([a-zA-Z_][a-zA-Z_0-9]*) (&#39;::&#39; IDENT)*
 STRING        = &#39;&#34;&#39; [^&#39;&#34;&#39;]* &#39;&#34;&#39;
 NUMBER        = [0-9]+
-functionCall  = IDENT &#39;(&#39; (expression &#39;,&#39;?)* &#39;)&#39;
 PREFIX_OP     = &#39;!&#39;
 INIFIX_OP     = &#39;+&#39; &#39;-&#39; &#39;*&#39; &#39;/&#39;
 

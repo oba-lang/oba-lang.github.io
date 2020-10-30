@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Embedding - Oba</title>
+  <title>Data - Oba</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="favicon.png">
@@ -108,14 +108,14 @@
         <a href="/guides/reference/cli/">CLI</a>
       </li>
       
-      <li class="active ">
+      <li class="">
         <a href="/guides/reference/embedding/">Embedding</a>
       </li>
       
       
       <li><h4>Language</h4></li>
       
-      <li class="">
+      <li class="active ">
         <a href="/guides/language/data/">Data</a>
       </li>
       
@@ -156,9 +156,32 @@
         </div>
         <div class="col-12 col-md-9">
           
-<h1 class="title">Embedding</h1>
+<h1 class="title">Data</h1>
 <div class="content ">
-  
+  <p>Oba does not support classes in the same way that object-oriented languages do.
+Instead oba supports &ldquo;Data types&rdquo; which are sort of like Python&rsquo;s named
+tuples. A data type has a <em>family</em> along with a number of named <em>constructors</em>
+for the type. For example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">data Cycle = Bicycle | Motorcycle color
+</code></pre></div><p>The above example is a simple definition of a <code>Cycle</code> data type family. A
+<code>Cycle</code> can be created using either of the two constructors <code>Bicycle</code> and
+<code>Motorcycle</code>. The <code>color</code> name above represents a parameter for the
+<code>Motorcycle</code> constructor.  It&rsquo;s important to note that <code>color</code> is <em>not</em> the
+<em>name</em> of a field, it is just a placeholder that tells Oba, &ldquo;The Motorcycle
+constructor requires one argument&rdquo;. The name <code>color</code> is only symbolic, and
+may indicate to readers that a string representing the color of the motorcycle
+should be held in that field.</p>
+<h2 id="instances">Instances</h2>
+<p>Instances are unique occurences of data types. These are similar to instances in
+object-oriented programming, except they do not have methods; They are just
+ordered collections of values belonging to a particular data type family.</p>
+<p>Here&rsquo;s an example of how to create a <code>Cycle</code> using either constructor:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let bicycle = Bicycle()
+let motorcycle = Motorcycle(&#34;Red&#34;)
+</code></pre></div><p>If you print an instance, you&rsquo;ll see its data type family, constructor, and the
+fields that it contains:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">system::print(Motorcycle(&#34;Red&#34;)) // Prints: (Cycle::Motorcycle,Red)
+</code></pre></div>
 </div>
 </div>
 

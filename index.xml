@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Kendal Harland</copyright>
-    <lastBuildDate>Fri, 23 Oct 2020 08:43:37 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Oct 2020 10:23:58 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data</title>
+      <link>/guides/language/data/</link>
+      <pubDate>Fri, 30 Oct 2020 10:23:58 -0400</pubDate>
+      
+      <guid>/guides/language/data/</guid>
+      <description>Oba does not support classes in the same way that object-oriented languages do. Instead oba supports &amp;ldquo;Data types&amp;rdquo; which are sort of like Python&amp;rsquo;s named tuples. A data type has a family along with a number of named constructors for the type. For example:
+data Cycle = Bicycle | Motorcycle color The above example is a simple definition of a Cycle data type family. A Cycle can be created using either of the two constructors Bicycle and Motorcycle.</description>
+    </item>
+    
     <item>
       <title>Overview</title>
       <link>/guides/language/overview/</link>
