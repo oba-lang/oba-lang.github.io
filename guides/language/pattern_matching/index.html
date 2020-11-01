@@ -116,6 +116,10 @@
       <li><h4>Language</h4></li>
       
       <li class="">
+        <a href="/guides/language/errors/">Errors</a>
+      </li>
+      
+      <li class="">
         <a href="/guides/language/data/">Data Types</a>
       </li>
       
@@ -215,14 +219,14 @@ let area = match shape
 </code></pre></div><h2 id="mixed-patterns">Mixed Patterns</h2>
 <p>A match expression can use many different patterns at once. Here&rsquo;s an example
 that uses literal, variable, and constructor patterns all at once:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">  let value = Square(4)
-  let size = match value
-    | 1             = 1
-    | 2             = 2
-    | Square l      = l * l
-    | Rectangle w h = w * h
-    | value         = value
-    ;
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let value = Square(4)
+let size = match value
+  | 1             = 1
+  | 2             = 2
+  | Square l      = l * l
+  | Rectangle w h = w * h
+  | value         = value
+  ;
 
 system::print(size) // Prints: 16
 </code></pre></div><h2 id="error-handling">Error handling</h2>

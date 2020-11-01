@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Kendal Harland</copyright>
-    <lastBuildDate>Fri, 30 Oct 2020 10:23:58 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Oct 2020 17:22:34 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Errors</title>
+      <link>/guides/language/errors/</link>
+      <pubDate>Sat, 31 Oct 2020 17:22:34 -0400</pubDate>
+      
+      <guid>/guides/language/errors/</guid>
+      <description>The native panic function can be used to halt execution in Oba. It accepts a single argument. When called, the argument is printed along with a stack trace:
+panic(&amp;#34;error&amp;#34;) </description>
+    </item>
+    
     <item>
       <title>Data Types</title>
       <link>/guides/language/data/</link>
