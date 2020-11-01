@@ -185,15 +185,21 @@ passed as arguments to other functions.</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fn hello = system::print(&#34;hello&#34;)
 fn call f = f()
 call(hello)
-</code></pre></div><h1 id="nil">Nil</h1>
-<p>Oba has a singleton <code>nil</code> value which indicates the absence of a value. It
-is often used as a return value from built-in functions which don&rsquo;t return
-anything. There is no <code>nil</code> keyword, so the following code is invalid:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let x = nil
-</code></pre></div><p>However, the user can detect whether a value is nil using <code>isNil</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let nil = system::print(&#34;print returns nil&#34;)
-system::print(isNil(nil)) // true
-system::print(isNil(&#34;&#34;)) // false
+</code></pre></div><h1 id="optional-values">Optional Values</h1>
+<p>Oba uses a built-in <a href="/guides/language/data/">Data Type</a> named <code>Option</code> to indicate the presence or
+absence of a value. The <code>None</code> constructor is used to signifiy the absence of a
+value, while the <code>Some</code> constructor is used to signify the presence of a value:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let none = None()
+let some = Some(&#34;value&#34;)
+
+system::print(none) // Prints: (Option::None)
+system::print(some) // Prints: (Option::Some,value)
+system::print(none == some) // Prints: false
+</code></pre></div><p>The <code>Option</code> data type is visible to all Oba programs. It can optionally (ha)
+be imported from the &ldquo;option&rdquo; module:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">import &#34;option&#34;
+
+system::print(option::Some) // Prints: Option::Some
 </code></pre></div>
 </div>
 </div>
