@@ -294,8 +294,8 @@ below:</p>
 </tr>
 <tr>
 <td>3</td>
-<td>+ -</td>
-<td>Add,Subtract</td>
+<td>+ - %</td>
+<td>Add,Subtract,Mod</td>
 <td>Left</td>
 </tr>
 <tr>
@@ -325,7 +325,7 @@ statement     = functionDefn
               | ifStmt
               | whileStmt
               | expression
-constructor   | IDENT+
+constructor   | IDENTGG
 functionDefn  = &#39;fn&#39; IDENT parameterList functionBody
 variableDecl  = &#39;let&#39; IDENT &#39;=&#39; expression
 debugStmt     = &#39;debug&#39; expression
