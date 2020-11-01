@@ -228,7 +228,7 @@ let size = match value
   | value         = value
   ;
 
-system::print(size) // Prints: 16
+system::print(&#34;%(size)\n&#34;) // Prints: 16
 </code></pre></div><h2 id="error-handling">Error handling</h2>
 <p>It&rsquo;s possible that none of the patterns in a match expression match the given
 value. In this case an error is raised at runtime. As a best practice, always

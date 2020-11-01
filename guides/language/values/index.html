@@ -182,7 +182,7 @@ false
 </code></pre></div><h1 id="functions">Functions</h1>
 <p>Functions are first class values in Oba. They can be stored in variables and
 passed as arguments to other functions.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fn hello = system::print(&#34;hello&#34;)
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">fn hello = system::println(&#34;hello&#34;)
 fn call f = f()
 call(hello)
 </code></pre></div><h1 id="optional-values">Optional Values</h1>
@@ -192,14 +192,14 @@ value, while the <code>Some</code> constructor is used to signify the presence o
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">let none = None()
 let some = Some(&#34;value&#34;)
 
-system::print(none) // Prints: (Option::None)
-system::print(some) // Prints: (Option::Some,value)
-system::print(none == some) // Prints: false
+system::println(none) // Prints: (Option::None)
+system::println(some) // Prints: (Option::Some,value)
+system::println(none == some) // Prints: false
 </code></pre></div><p>The <code>Option</code> data type is visible to all Oba programs. It can optionally (ha)
 be imported from the &ldquo;option&rdquo; module:</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">import &#34;option&#34;
 
-system::print(option::Some) // Prints: Option::Some
+system::println(option::Some) // Prints: Option::Some
 </code></pre></div>
 </div>
 </div>
